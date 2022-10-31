@@ -34,7 +34,7 @@ main{
     width: 90%;
     margin: 5vh auto;
     padding: 20px;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 2px 2px 10px var(--shadow-color);
     gap: 20px;
 }
 
