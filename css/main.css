@@ -16,6 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     font-family: 'karla', sans-serif;
+    position: relative;
 }
 
 header{
@@ -39,5 +40,25 @@ main{
 }
 
 footer{
-    background-color: violet;
+    width: 100;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    padding: 20px;
+}
+
+@media (max-width:480px){
+    .header{
+        position: fixed;        
+    }
+    .header-title{
+        font-size: 1.5rem;
+    }
+    main{
+        padding: 0;
+        margin: 20px 0 0 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    
 }

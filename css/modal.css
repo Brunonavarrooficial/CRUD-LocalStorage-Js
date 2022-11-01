@@ -1,15 +1,17 @@
-/*.header-title{
-    color: black;
-    font-size: 2rem;
-}*/
-
 .modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: #00000090;
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal.active{
+    opacity: 1;
+    z-index: 1;
 }
 
 .modal-content {
@@ -32,16 +34,26 @@
     font-size: 1rem;
 }
 
+.header-title{
+    color: black;
+    font-size: 2rem;
+}
+
+
 .modal-close{
     position: absolute;
     right: 0; 
     display: block;
     width: 40px;
     height: 40px;
-    text-align: center;
-    background-color: tomato;
+    text-align: center;    
     user-select: none;
     cursor: pointer;
+}
+
+.modal-close:hover{
+    background-color: #FF4949;
+    color: white;
 }
 
 .modal-form{
@@ -71,4 +83,22 @@
     background-color: inherit;
     text-align: right;
     padding: 0 20px;
+}
+
+@media (max-width:480px){
+    .modal{
+        top: 100%;
+        transition: all 1s ease;
+    }
+    .modal.active{
+        top: 0;
+    }
+    .modal-content{
+        margin: 0;
+        width: 100%;
+        position: fixed;
+    }
+    .modal-field{
+        width: 100%;
+    }
 }

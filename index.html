@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/records.css">
+    <script src="js/main.js" defer></script>
     <title>CRUD</title>
 </head>
 
@@ -21,7 +22,7 @@
         <h1 class="header-title">Cadastro de Clientes</h1>
     </header>
     <main>
-        <button type="button" class="button blue">Cadastrar Cliente</button>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
         <table class="records">
             <thead>
                 <tr>
@@ -65,11 +66,11 @@
                 </tr>
             </tbody>
         </table>
-        <div class="modal">
+        <div class="modal" id="modal">
             <div class="modal-content">
                 <header class="modal-header">
                     <h2>Novo Cliente</h2>
-                    <span class="modal-close">&#10006;</span>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
                 <form class="modal-form" action="">
                     <input type="text" name="" id="" class="modal-field" placeholder="Nome do Cliente">
@@ -85,7 +86,7 @@
         </div>  
     </main>
     <footer>
-        footer
+        Copyright &copy; Bruno Navarro
     </footer>
 
 </body>
