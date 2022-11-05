@@ -60,7 +60,7 @@ const saveClient = () => {
             updateTable();
             closeModal();
             console.log('Cliente cadastrado com sucesso!');
-        }else{
+        } else {
             updateClient(index, newUser);
             updateTable();
             closeModal();
@@ -116,7 +116,13 @@ const editDelete = (event) => {
         if (action == 'edit') {
             editClient(index)
         } else {
-            console.log('deletando cliente');
+            const userDelete = readClient()[index];
+            const response = confirm(`Deseja Relamente excluir o cliente ${userDelete.nome}`);
+            if (response) {
+                deleteClient(index);
+                updateTable();
+            }
+
         }
     }
 
