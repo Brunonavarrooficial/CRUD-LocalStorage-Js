@@ -46,6 +46,7 @@ const clearFields = () => {
     fields.forEach(field => field.value = '');
 }
 
+
 const saveClient = () => {
     if (isValidFields()) {
         const newUser = {
